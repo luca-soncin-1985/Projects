@@ -1,6 +1,6 @@
-from datetime import timedelta
+from datetime import timedelta, datetime
 from airflow import DAG
-from airflow.operators.python_operator import PythonOperator
+from airflow.operators.python import PythonOperator
 from airflow.utils.dates import days_ago
 
 from spotify_etl import run_spotify_etl
@@ -20,7 +20,7 @@ dag = DAG(
     'spotify_dag',
     default_args=default_args,
     description='Our first DAG with ETL process!',
-    schedule_interval=timedelta(days=1),
+    schedule=timedelta(days=1),
 )
 
 def just_a_function():
