@@ -1,1 +1,0 @@
-Before running the code you must insert your client_id and client_secret keys
