@@ -1,0 +1,9 @@
+1. Create IAM user
+2. Create S3 raw data Bucket
+3. Upload data to S3 via CLI
+4. Create Crawler
+    Give access to a new IAM role in GLUE
+5. Create database
+6. "view data" in Athena and set output location (s3 bucket)
+7. Create Lambda function (assign role, change S3 Put details), add layer
+8. Run Lambda and find result in Athena
